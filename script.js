@@ -135,7 +135,6 @@ function upload (id, what, path, cbDone, cbErr, cbUpdate) {
 }
 
 function rpc (call, args, cb) {
-  console.log('RPC', call, args)
   const xhr = new XMLHttpRequest()
   xhr.open('POST', location.origin + window.extraPath + '/rpc')
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
@@ -161,7 +160,6 @@ function shouldRefresh () {
   totalDone += 1
   if (totalUploads === totalDone) {
     window.onbeforeunload = null
-    console.log('done uploading ' + totalDone + ' files')
     totalDone = 0
     totalUploads = 0
     totalUploadsSize = 0
@@ -347,7 +345,6 @@ async function padOn (a) {
     editor.value = ''
   }
 
-  console.log('editing file', fileEdited)
   setCursorTo(fileEdited)
   editor.style.display = crossIcon.style.display = 'block'
   table.style.display = 'none'
@@ -805,7 +802,6 @@ function init () {
 
   setTitle()
   scrollToArrow()
-  console.log('browsed to ' + location.href)
 
   if (cuts.length) {
     const match = allA.filter(a => cuts.find(c => c === decode(a.href)))
