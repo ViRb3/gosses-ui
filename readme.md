@@ -1,4 +1,4 @@
-gossa-ui
+gosses-ui
 ========
 
-a ~~ugly~~ simple, dependency-free, plain js/css/html front-end for [gossa](https://github.com/pldubouilh/gossa)
+a ~~ugly~~ simple, dependency-free, plain js/css/html front-end for [gosses](https://github.com/ViRb3/gosses)
