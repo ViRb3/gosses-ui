@@ -410,6 +410,16 @@ window.rename = (e, commit) => {
   }
 }
 
+window.downloadBtn = () => {
+  const zipPath = encodeURIComponent(window.location.pathname)
+  const pathParts = window.location.pathname.split("/")
+  let zipName = encodeURIComponent(pathParts[pathParts.length - 2])
+  if (zipName === '') {
+    zipName = 'root'
+  }
+  window.location = window.extraPath + '/zip?zipPath=' + zipPath + '&zipName=' + zipName
+}
+
 function aboveBelowRightin (el) {
   const itemPos = el.getBoundingClientRect()
   return itemPos.top < 0 ? -1 : itemPos.bottom > window.innerHeight ? 1 : 0
