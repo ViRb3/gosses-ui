@@ -408,9 +408,9 @@ window.rename = (e, commit) => {
 }
 
 window.downloadBtn = () => {
-  const zipPath = encodeURIComponent(window.location.pathname)
+  const zipPath = window.location.pathname
   const pathParts = window.location.pathname.split("/")
-  let zipName = encodeURIComponent(pathParts[pathParts.length - 2])
+  let zipName = pathParts[pathParts.length - 2]
   if (zipName === '') {
     zipName = 'root'
   }
